@@ -38,5 +38,6 @@ out/
 
 ### Secrets ###
 application.yml
-config/
 *.DS_Store
+
+src/main/java/com/wonhana/kau/wonhana/config/secret/Secret.java
