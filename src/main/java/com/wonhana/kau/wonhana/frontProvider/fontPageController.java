@@ -11,5 +11,9 @@ public class fontPageController {
     public String homePage(){
         return "assetStatus";
     }
+    @RequestMapping("/cash-flow")
+    public String cashFlow(){
+        return "cashFlow";
+    }
 
 }

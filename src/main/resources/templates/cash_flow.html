@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Do+Hyeon&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@300;400;500&family=Russo+One&family=Sniglet&display=swap" rel="stylesheet">
+    
+    <!-- STYLE Sheet -->
+    <link rel="stylesheet" type="text/css" href="/css/cash_flow.css"> 
+
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>자산 현황</title>
+</head>
+<body>
+    <div class="main-graph-area">
+        <div class="bar-graph-top-area">
+            <div class="asset-category" id="left">재정 현황</div>
+            <div class="asset-category" id="right">현금 흐름</div>
+        </div>
+        <div class="bar-graph-area">
+            <div class="bar-graph-title">자산 현황</div>
+            <div class="graph-area">
+                <div class="draw-bar-graph" id="first-ratio"> </div>
+                <div class="draw-bar-graph" id="second-ratio"> </div>
+                <div class="draw-bar-graph" id="third-ratio"> </div>
+                <div class="draw-bar-graph" id="fourth-ratio"> </div>
+            </div>
+            <div class="graph-info-area">
+                <div class="color-info" id="first"></div>
+                <div class="info-text">금융투자자산</div>
+                <div class="percent-info">60%</div>
+                <div class="money-info">1,245,920원</div>
+            </div>
+            <div class="graph-info-area">
+                <div class="color-info" id="second"></div>
+                <div class="info-text">예·적금</div>
+                <div class="percent-info">20%</div>
+                <div class="money-info">455,920원</div>
+            </div>
+            <div class="graph-info-area">
+                <div class="color-info" id="third"></div>
+                <div class="info-text">현금</div>
+                <div class="percent-info">10%</div>
+                <div class="money-info">123,456원</div>
+            </div>
+            <div class="graph-info-area">
+                <div class="color-info" id="fourth"></div>
+                <div class="info-text">부동산</div>
+                <div class="percent-info">10%</div>
+                <div class="money-info">123,456원</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recomment-btn-area">
+        <div class="recommend-btn-img" id="first">
+            <img src="/image/recommend_btn_1.png">
+        </div>
+        <div class="recommend-btn-img" id="second">
+            <img src="/image/recommend_btn_2.png">
+        </div>
+        <div class="recommend-btn-img" id="third">
+            <img src="/image/recommend_btn_3.png">
+        </div>
+    </div>
+
+    <div class="bottom-graph-area">
+        <div class="dept-graph-area">
+            <div class="dept-graph-title">부채 비율</div>
+            <div class="dept-graph" id="dept-graph-doughnut">
+                <!-- <canvas id="dept-graph-doughnut" width="200" height="200"></canvas> -->
+                <div id="donut-percent-inner-text">
+                <span id="donut-percent-text">80%</span><Br />
+                <span id="donut-center-text">부채비율</span>
+                </div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="dept-graph-content">
+                부채비율이 너무 높습니다.<br>
+                전문가와의 자산 상담을 권합니다.<br>
+                <button class="button is-danger is-rounded" style="
+                padding-right: 10px;
+                padding-bottom: 3px;
+                padding-top: 3px;
+                padding-left: 10px;
+                font-weight: bolder;
+                height:1.8em;
+                margin-top: 10px;
+                background-color: #FD6A51;
+            ">자산관리사 연결</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav-bar">
+        <div class="bottom-nav-first">
+            <img src="/image/bottom_icon_1.png">
+        </div>
+        <div class="bottom-nav-second">
+            <img src="/image/bottom_icon_2.png">
+        </div>
+        <div class="bottom-nav-third">
+            <img src="/image/bottom_icon_3.png">
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/js/cash_flow.js"></script>
+</html>
