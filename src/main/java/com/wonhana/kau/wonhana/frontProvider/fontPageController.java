@@ -9,7 +9,7 @@ public class fontPageController {
 
     @RequestMapping("/")
     public String homePage(){
-        return "main_1";
+        return "assetStatus";
     }
 
 }
