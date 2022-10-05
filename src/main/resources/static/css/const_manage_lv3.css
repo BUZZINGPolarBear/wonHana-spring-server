@@ -1,0 +1,291 @@
+body{
+    margin: 0px;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: rgba(248, 248, 248);
+}
+.main-graph-area{
+    width: 100vw;
+    height: 8vh;
+    background-color: white;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 2vh;
+
+    box-shadow: 3px 3px rgb(230, 230, 230);
+}
+
+.main-graph-area .bar-graph-top-area{
+    position: relative;
+    height: 8vh;
+    width: 100vw;
+
+    border-bottom: 1px #E5E5E5 solid;
+}
+
+.cost-category{
+    float: left;
+    width: 100vw;
+    height: 3vh;
+    text-align: center;
+    line-height: 3vh;
+    font-weight: bold;
+
+    margin-top: 4vh;
+}
+
+.asset-category#right{
+    float: left;
+    margin-left: 28vw;
+}
+
+.cost-graph-title{
+    font-weight: bolder;
+    font-size: 0.8em;
+    margin-left: 10vw;
+    padding-top: 3vh;
+}
+
+#asset-status-top-title{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#asset-status-top-content{
+    font-size: 1em;
+    color: #A5A5A6;
+}
+
+#asset-status-top-percentage{
+    color: #FBAE29;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.graph-area{
+    width: 50vw;
+    height: 50vw;
+
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 2vh;
+
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.chart-inner-content{
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    margin-top: 2vh;
+    margin-left: 50vw;
+    padding-top: 10vh;
+    font-size: 0.8em;
+    line-height: 1.6em;  
+    z-index: 99999;
+
+    background-color: #1DCB9D;
+}
+.graph-info-area{
+    width: 95%;
+    height: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    /* background-color: cornsilk; */
+}
+
+.main-graph-info-area{
+    width: 95%;
+    height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+
+    /* background-color: cornsilk; */
+}
+
+.main-graph-info-area .color-info{
+    float: left;
+    margin-top: 2vw;
+    width: 7vw;
+}
+.main-graph-info-area .color-info .img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+.main-graph-info-area .main-info-text{
+    width: 95%;
+    height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    /* background-color: cornsilk; */
+}
+
+.graph-info-area .color-info{
+    float: left;
+    margin-top: 2vw;
+    width: 7vw;
+}
+.graph-info-area .color-info .img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.graph-info-area .info-text{
+    float: left;
+    width: 48vw;
+    height: 100%;
+    line-height: 5vh;
+    margin-left: 5vw;
+
+    color: #797A7A;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.graph-info-area .percent-info{
+    float: left;
+    width: 30vw;
+    height: 100%;
+    line-height: 5vh;
+    color: #797A7A;
+    font-size: 0.8em;
+    text-align: left;
+}
+.graph-info-area .money-info{
+    float: right;
+    width: fit-content;
+    height: 100%;
+    line-height: 5vh;
+    color: #797A7A;
+    font-size: 0.8em;
+}
+
+/*
+ 비용관리 그래프 공간
+*/
+.cost-graph-area{
+    width: 100vw;
+    height: 70vh;
+    background-color: white;
+    margin-top: 2vh;
+    margin-bottom: 15vh;
+    border-radius: 10px;
+    
+    box-shadow: 3px 3px rgb(230, 230, 230);
+}
+
+
+/* 
+    하단 부채비율 추가
+*/
+.bottom-graph-area{
+    width: 100vw;
+    height: 27vh;
+    background-color: white;
+
+    box-shadow: 3px 3px rgb(230, 230, 230);
+}
+
+.dept-graph-area{
+    width: 90%;
+}
+
+.dept-graph-title{
+    width: 100%;
+    height: 1em;
+    float: left;
+
+    font-weight: bolder;
+    font-size: 0.8em;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+
+#dept-graph-doughnut{
+    float: left;
+    width: 45%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 2vh;
+    height: 20vh;
+}
+
+#donut-percent-inner-text{
+    width: 42%;
+    height: 20vh;
+    position: absolute;
+    padding-top: 8vh;
+    line-height: 1em;
+    text-align: center;
+    z-index: 999999999999999;
+}
+
+#donut-center-text{
+    font-size: 0.9em;
+    font-weight: bolder;
+    color: #FBAE29;
+}
+
+.dept-graph-content{
+    position: absolute;
+    width: 45%;
+    height: 10vh;
+    margin-top: 2vh;
+    margin-left: 50vw;
+    padding-top: 10vh;
+    font-size: 0.8em;
+    line-height: 1.6em;    
+}
+
+/* 
+하단 네비게이션 바
+*/
+.bottom-nav-bar{
+    width: 100vw;
+    height: 5vh;
+    margin-top: 15px;
+    box-shadow: -1px -1px rgb(230, 230, 230);
+    border-radius: 6px 6px;
+    padding-top: 1vh;
+
+
+    background-color: white;
+
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.bottom-nav-first{
+    width: 15vw;
+    height: 4vh;
+}
+.bottom-nav-first img{
+    height: 100%;
+}
+
+.bottom-nav-second{
+    width: 15vw;
+    height: 4vh;
+    margin-left: 16vw;
+}
+.bottom-nav-second img{
+    height: 100%;
+}
+
+.bottom-nav-third{
+    width: 15vw;
+    height: 4vh;
+    margin-left: 16vw;
+}
+.bottom-nav-third img{
+    height: 100%;
+}
