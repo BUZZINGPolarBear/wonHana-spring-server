@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Do+Hyeon&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@300;400;500&family=Russo+One&family=Sniglet&display=swap" rel="stylesheet">
+    
+    <!-- STYLE Sheet -->
+    <link rel="stylesheet" type="text/css" href="/css/const_manage_lv4.css"> 
+
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>비용 관리</title>
+</head>
+<body>
+    <div class="main-graph-area">
+        <div class="bar-graph-top-area">
+            <div class="cost-category">비용 관리</div>
+        </div>
+    </div>
+
+    <div class="cost-graph-area">
+            <div class="cost-graph-title"><span id="asset-status-top-title">자산 현황</span><br>
+                <span id="asset-status-top-content">수익대비 사용한 금액 <span id="asset-status-top-percentage">86%</span></span></div>
+            <div class="graph-area">
+                <div id="donut-percent-inner-text">
+                    <span id="donut-percent-text"><img src="/image/alert 1.svg"></span><Br />
+                    <span id="donut-center-text">소비 경보<br>(4단계)</span>
+                </div>
+                <canvas id="myChart">
+
+                </div>
+                <div class="main-graph-info-area">
+                    <div class="color-info"> <img src="/image/Motor Scooter.svg"> </div>
+                    <div class="main-info-text"><span style="font-weight: bolder; font-size:1.1em">"배달 음식을 자주 먹는 당신" </span><br> <span style="color: #797A7A; font-size:0.9em">이번 주는 일주일에 한 번으로 줄여보는 건 어때요?</span></div>
+                </div>
+                <div class="graph-info-area">
+                    <div class="color-info"> <img src="/image/bike-icon.svg"> </div>
+                    <div class="info-text">배달의 민족</div>
+                    <div class="percent-info">136,000원 | 50%</div>
+                </div>
+                <div class="graph-info-area">
+                    <div class="color-info"> <img src="/image/car-icon.svg"> </div>
+                    <div class="info-text">교통비</div>
+                    <div class="percent-info">31,568원 | 20%</div>
+                </div>
+                <div class="graph-info-area">
+                    <div class="color-info"> <img src="/image/mart-icon.svg"> </div>
+                    <div class="info-text">현대백화점</div>
+                    <div class="percent-info">15,558원 | 10%</div>
+                </div>
+            </div>
+            
+
+    </div>
+
+
+    <div class="bottom-nav-bar">
+        <div class="bottom-nav-first" id="bottom-icon-first">
+            <img src="/image/bottom_icon_1_gray.svg">
+        </div>
+        <div class="bottom-nav-second" id="bottom-icon-second">
+            <img src="/image/bottom_icon_1_light.svg">
+        </div>
+        <div class="bottom-nav-third" id="bottom-icon-third">
+            <img src="/image/bottom_icon_3.svg">
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/js/const_manage_lv4.js"></script>
+</html>

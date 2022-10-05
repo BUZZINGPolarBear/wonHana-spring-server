@@ -1,4 +1,23 @@
 var ctx = document.getElementById("myChart").getContext('2d');
+const now_status_btn = document.getElementById("left");
+const bottomIconFirst = document.getElementById("bottom-icon-first")
+const bottomIconSecond = document.getElementById("bottom-icon-second")
+const bottomIconThird = document.getElementById("bottom-icon-third")
+
+bottomIconFirst.onclick = () => {
+  location.href = "/";
+}
+
+bottomIconSecond.onclick = () => {
+location.href = "/cost-manage";
+}
+
+bottomIconThird.onclick = ()=>{
+  location.href = "/bankruptcy-prevent"
+}
+now_status_btn.onclick = ()=>{
+  location.href = "/"
+}
 
 function draw() {
     ctx.font = '48px serif';
@@ -10,10 +29,10 @@ var myChart = new Chart(ctx, {
   data: {
     datasets: [{
       label: '# of Tomatoes',
-      data: [80, 20],
+      data: [35, 65],
       backgroundColor: [
-        '#FD6A51',
-        '#E5E5E5'
+        '#1DCB9D',
+        '#F3F3F3'
       ],
       borderWidth: 1,
       weight: 10
@@ -31,7 +50,9 @@ var myChart = new Chart(ctx, {
             lineHeight: 25 // Default is 25 (in px), used for when text wraps
           }
         },
-              borderWidth: 1
+        borderWidth: 1,
+        rotation: -90,
+        circumference: 180,
   }
 }
 );

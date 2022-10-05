@@ -8,136 +8,156 @@ body{
     height: 8vh;
     background-color: white;
 
-    box-shadow: 1px 1px rgb(230, 230, 230);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 2vh;
+
+    box-shadow: 3px 3px rgb(230, 230, 230);
 }
 
 .main-graph-area .bar-graph-top-area{
     position: relative;
-    height: 100%;
+    height: 8vh;
     width: 100vw;
 
     border-bottom: 1px #E5E5E5 solid;
 }
 
-.asset-category{
+.cost-category{
     float: left;
-    width: 20vw;
+    width: 100vw;
     height: 3vh;
     text-align: center;
     line-height: 3vh;
+    font-weight: bold;
 
-    margin-top: 5vh;
-}
-.asset-category#left{
-    float: left;
-    margin-left: 15vw;
-    color: #C7C8C8;
+    margin-top: 4vh;
 }
 
 .asset-category#right{
     float: left;
     margin-left: 28vw;
-    font-weight: bolder;
-    border-bottom: 1px #1DCB9D solid;
-}
-.bar-graph-area{
-    float: left;
-    height: 35vh;
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 4.5vh;
-    margin-bottom: 2.5vh;
-
-    /* background-color:rgb(255, 232, 255); */
 }
 
-.bar-graph-title{
+.cost-graph-title{
     font-weight: bolder;
     font-size: 0.8em;
-    margin-left: 5px;
+    margin-left: 10vw;
+    padding-top: 3vh;
+}
+
+#asset-status-top-title{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#asset-status-top-content{
+    font-size: 1em;
+    color: #A5A5A6;
+}
+
+#asset-status-top-percentage{
+    color: #FD6A51;
+    font-size: 1.1em;
+    font-weight: bolder;
 }
 
 .graph-area{
+    width: 50vw;
+    height: 50vw;
+
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 2vh;
+
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.chart-inner-content{
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    margin-top: 2vh;
+    margin-left: 50vw;
+    padding-top: 10vh;
+    font-size: 0.8em;
+    line-height: 1.6em;  
+    z-index: 99999;
+
+    background-color: #1DCB9D;
+}
+.graph-info-area{
     width: 95%;
     height: 5vh;
-
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-top: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
 
     /* background-color: cornsilk; */
 }
 
-.draw-bar-graph{
-    position: relative;
-    height: 50%;
-    float: left;
-}
-.draw-bar-graph#first-ratio{
-    width: 58%;
-    background-color: #1DCB9D;
-    border-radius: 10px 0 0 10px;
-}
-
-.draw-bar-graph#second-ratio{
-    width: 18%;
-    background-color: #4471FB;
-    border-radius: 1px;
-    margin-left: 3px;
-}
-
-.draw-bar-graph#third-ratio{
-    width: 8%;
-    background-color: #FD6A51;
-    border-radius: 1px;
-    margin-left: 3px;
-}
-
-.draw-bar-graph#fourth-ratio{
-    width: 8%;
-    background-color: #FBAE29;
-    border-radius: 0 10px 10px 0;
-    margin-left: 3px;
-}
-
-.graph-info-area{
-    width: 90%;
+.main-graph-info-area{
     width: 95%;
-    height: 5vh;
+    height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
 
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    /* margin-top: 2vh; */
+    /* background-color: cornsilk; */
+}
+
+.main-graph-info-area .color-info{
+    float: left;
+    margin-top: 2vw;
+    width: 7vw;
+}
+.main-graph-info-area .color-info .img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+.main-graph-info-area .main-info-text{
+    width: 95%;
+    height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
 
     /* background-color: cornsilk; */
 }
 
 .graph-info-area .color-info{
     float: left;
-    width: 13px;
-    height: 13px;
-    margin-top: 1.8vh;
-    border-radius: 3px;
+    margin-top: 2vw;
+    width: 7vw;
+}
+.graph-info-area .color-info .img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .graph-info-area .info-text{
     float: left;
-    width: 40%;
+    width: 48vw;
     height: 100%;
     line-height: 5vh;
-    margin-left: 10px;
+    margin-left: 5vw;
 
     color: #797A7A;
-    font-size: 0.8em;
+    font-weight: bolder;
+    font-size: 1.1em;
 }
 .graph-info-area .percent-info{
     float: left;
-    width: 15%;
+    width: 30vw;
     height: 100%;
     line-height: 5vh;
     color: #797A7A;
     font-size: 0.8em;
+    text-align: left;
 }
 .graph-info-area .money-info{
     float: right;
@@ -148,65 +168,28 @@ body{
     font-size: 0.8em;
 }
 
-.graph-info-area .color-info#first{
-    background-color: #1DCB9D;
-}
-.graph-info-area .color-info#second{
-    background-color: #4471FB;
-}
-.graph-info-area .color-info#third{
-    background-color: #FD6A51;
-}
-.graph-info-area .color-info#fourth{
-    background-color: #FBAE29;
-}
-
-/* 
-    중단의 추천 버튼들
+/*
+ 비용관리 그래프 공간
 */
-
-.recomment-btn-area{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cost-graph-area{
     width: 100vw;
-    height: 140px;
-    margin-top: 4px;
-
-    /* background-color:darkcyan; */
-}
-
-.recommend-btn-img{
-    float: left;
-    height: 10vh;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 70vh;
+    background-color: white;
+    margin-top: 2vh;
+    margin-bottom: 15vh;
     border-radius: 10px;
+    
+    box-shadow: 3px 3px rgb(230, 230, 230);
 }
 
-.recommend-btn-img#first{
-    max-width: 100%;
-    height : auto;
-}
-
-.recommend-btn-img#second{
-    max-width: 100%;
-    height : auto;
-}
-
-.recommend-btn-img#third{
-    max-width: 100%;
-    height : auto;
-}
 
 /* 
     하단 부채비율 추가
 */
 .bottom-graph-area{
     width: 100vw;
-    height: 21vh;
+    height: 27vh;
     background-color: white;
-    margin-top: 2vh;
 
     box-shadow: 3px 3px rgb(230, 230, 230);
 }
@@ -216,14 +199,14 @@ body{
 }
 
 .dept-graph-title{
-    position: absolute;
     width: 100%;
     height: 1em;
     float: left;
+
     font-weight: bolder;
     font-size: 0.8em;
     margin-left: 5vw;
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 
 #dept-graph-doughnut{
@@ -240,26 +223,22 @@ body{
     height: 20vh;
     position: absolute;
     padding-top: 8vh;
+    line-height: 1em;
     text-align: center;
     z-index: 999999999999999;
 }
 
-#donut-percent-text{
-    font-size: 1.3em;
-    font-weight: bolder;
-    color: #1DCB9D;
-}
-
 #donut-center-text{
     font-size: 0.9em;
-    color: #1DCB9D;
+    font-weight: bolder;
+    color: #FD6A51;
 }
 
 .dept-graph-content{
     position: absolute;
-    text-align: center;
     width: 45%;
     height: 10vh;
+    margin-top: 2vh;
     margin-left: 50vw;
     padding-top: 10vh;
     font-size: 0.8em;
@@ -309,14 +288,4 @@ body{
 }
 .bottom-nav-third img{
     height: 100%;
-}
-
-.bottom-sort-area{
-    width: 100vw;
-    height: 40vh;
-    background-color: white;
-    margin-top: 2vh;
-    margin-bottom: 15vh;
-
-    box-shadow: 3px 3px rgb(230, 230, 230);
 }

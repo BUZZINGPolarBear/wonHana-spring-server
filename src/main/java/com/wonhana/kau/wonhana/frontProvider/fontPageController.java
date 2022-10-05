@@ -13,7 +13,12 @@ public class fontPageController {
     }
     @RequestMapping("/cash-flow")
     public String cashFlow(){
-        return "cashFlow";
+        return "cash_flow";
+    }
+
+    @RequestMapping("/cost-manage")
+    public String costManage(){
+        return "cost_manage_lv4";
     }
 
 }

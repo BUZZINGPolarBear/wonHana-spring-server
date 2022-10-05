@@ -194,11 +194,13 @@ body{
 .recommend-btn-img#second{
     max-width: 100%;
     height : auto;
+    margin-left: 2vw;
 }
 
 .recommend-btn-img#third{
     max-width: 100%;
     height : auto;
+    margin-left: 2vw;
 }
 
 /* 
