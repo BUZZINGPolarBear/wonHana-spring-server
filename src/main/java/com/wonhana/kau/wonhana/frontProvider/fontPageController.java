@@ -36,4 +36,10 @@ public class fontPageController {
         return "cost_manage_lv3";
     }
 
+    @RequestMapping("/bankruptcy-prevent")
+    public String bankruptcyPrevent(){
+        return "bankruptcy-prevent";
+    }
+
+
 }
