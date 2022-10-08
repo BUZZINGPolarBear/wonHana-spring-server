@@ -24,11 +24,20 @@ public class UserInfoRepository {
 
                 "(houseLoan + carLoan) as liabilities," +
 
+                "(fixedIncome + flexibleIncome) as income," +
+
+                "(houseLoanInterest + carLent + carInsurance + Dues + " +
+                "communicationCost + subscribeFee) as fixedExpenditure," +
+
+                "(coffee + food + snack + liquidNCigarette + necessityProduct + " +
+                "oil + leisureCost + stockPurchase) as flexibleExpenditure," +
+
                 "(houseLoanInterest + carLent + carInsurance + Dues +" +
                 "communicationCost + subscribeFee + coffee + food + snack +" +
-                "liquidNCigarette + necessityProduct + oil) as outcome " +
+                "liquidNCigarette + necessityProduct + oil + " +
+                "leisureCost + stockPurchase) as outcome " +
 
-                "from FixedExpenditure, FlexibleExpenditure, UserAsset, UserDebt";
+                "from FixedExpenditure, FlexibleExpenditure, UserAsset, UserDebt, UserIncome";
 
         return template.query(sql, userDtoRowMapper());
     }
@@ -39,19 +48,29 @@ public class UserInfoRepository {
 
                 "(houseLoan + carLoan) as liabilities," +
 
+                "(fixedIncome + flexibleIncome) as income," +
+
+                "(houseLoanInterest + carLent + carInsurance + Dues + " +
+                "communicationCost + subscribeFee) as fixedExpenditure," +
+
+                "(coffee + food + snack + liquidNCigarette + necessityProduct + " +
+                "oil + leisureCost + stockPurchase) as flexibleExpenditure," +
+
                 "(houseLoanInterest + carLent + carInsurance + Dues +" +
                 "communicationCost + subscribeFee + coffee + food + snack +" +
-                "liquidNCigarette + necessityProduct + oil) as outcome " +
+                "liquidNCigarette + necessityProduct + oil + " +
+                "leisureCost + stockPurchase) as outcome " +
 
-                "from FixedExpenditure, FlexibleExpenditure, UserAsset, UserDebt " +
+                "from FixedExpenditure, FlexibleExpenditure, UserAsset, UserDebt, UserIncome " +
 
                 "where FixedExpenditure.id = :FixedExpenditure.id and " +
                 "FlexibleExpenditure.id = :FlexibleExpenditure.id and " +
                 "UserAsset.id = :UserAsset.id and " +
+                "UserIncome.id = :UserIncome.id and " +
                 "UserDebt.id = :UserDebt.id";
 
         Map<String, Long> param = Map.of("FixedExpenditure.id", id, "FlexibleExpenditure.id", id,
-                "UserAsset.id", id, "UserDebt.id", id);  //
+                "UserAsset.id", id, "UserDebt.id", id, "UserIncome.id", id);
 
         return template.query(sql, param, userDtoRowMapper());
     }

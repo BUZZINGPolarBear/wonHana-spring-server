@@ -22,12 +22,18 @@ public class UserInfoDto {
     private Integer liquidNCigarette;
     private Integer necessityProduct;
     private Integer oil;
+    private Integer leisureCost;
+    private Integer stockPurchase;
 
 //  자산
     private Integer car;
     private Integer accountBalance;
     private Integer stock;
     private Integer house;
+
+//  수입
+    private Integer fixedIncome;
+    private Integer flexibleIncome;
 
 //  부채
     private Integer houseLoan;
@@ -37,5 +43,9 @@ public class UserInfoDto {
     private Integer asset;
     private Integer liabilities;
     private Integer outcome;
+    private Integer income;
 
+//  지출 고정, 유동으로 나눠서 출력
+    private Integer fixedExpenditure;
+    private Integer flexibleExpenditure;
 }

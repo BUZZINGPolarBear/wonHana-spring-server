@@ -69,5 +69,4 @@ public class SampleController {
 
         return baseResponse;
     }
-
 }
