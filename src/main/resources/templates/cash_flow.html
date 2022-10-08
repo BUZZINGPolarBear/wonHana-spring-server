@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>자산 현황</title>
+    <title>현금 흐름</title>
 </head>
 <body>
     <div class="main-graph-area">
@@ -28,90 +29,91 @@
             <div class="asset-category" id="left">재정 현황</div>
             <div class="asset-category" id="right">현금 흐름</div>
         </div>
-        <div class="bar-graph-area">
-            <div class="bar-graph-title">자산 현황</div>
-            <div class="graph-area">
-                <div class="draw-bar-graph" id="first-ratio"> </div>
-                <div class="draw-bar-graph" id="second-ratio"> </div>
-                <div class="draw-bar-graph" id="third-ratio"> </div>
-                <div class="draw-bar-graph" id="fourth-ratio"> </div>
-            </div>
-            <div class="graph-info-area">
-                <div class="color-info" id="first"></div>
-                <div class="info-text">금융투자자산</div>
-                <div class="percent-info">60%</div>
-                <div class="money-info">1,245,920원</div>
-            </div>
-            <div class="graph-info-area">
-                <div class="color-info" id="second"></div>
-                <div class="info-text">예·적금</div>
-                <div class="percent-info">20%</div>
-                <div class="money-info">455,920원</div>
-            </div>
-            <div class="graph-info-area">
-                <div class="color-info" id="third"></div>
-                <div class="info-text">현금</div>
-                <div class="percent-info">10%</div>
-                <div class="money-info">123,456원</div>
-            </div>
-            <div class="graph-info-area">
-                <div class="color-info" id="fourth"></div>
-                <div class="info-text">부동산</div>
-                <div class="percent-info">10%</div>
-                <div class="money-info">123,456원</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="recomment-btn-area">
-        <div class="recommend-btn-img" id="first">
-            <img src="/image/recommend_btn_1.png">
-        </div>
-        <div class="recommend-btn-img" id="second">
-            <img src="/image/recommend_btn_2.png">
-        </div>
-        <div class="recommend-btn-img" id="third">
-            <img src="/image/recommend_btn_3.png">
-        </div>
+        
     </div>
 
     <div class="bottom-graph-area">
         <div class="dept-graph-area">
-            <div class="dept-graph-title">부채 비율</div>
+            <div class="dept-graph-title">수익대비 소비 현황</div>
             <div class="dept-graph" id="dept-graph-doughnut">
-                <!-- <canvas id="dept-graph-doughnut" width="200" height="200"></canvas> -->
                 <div id="donut-percent-inner-text">
-                <span id="donut-percent-text">80%</span><Br />
-                <span id="donut-center-text">부채비율</span>
+                <span id="donut-center-text">사용 금액</span><Br />
+                <span id="donut-percent-text">35%</span>
                 </div>
                 <canvas id="myChart"></canvas>
             </div>
-            <div class="dept-graph-content">
-                부채비율이 너무 높습니다.<br>
-                전문가와의 자산 상담을 권합니다.<br>
-                <button class="button is-danger is-rounded" style="
-                padding-right: 10px;
-                padding-bottom: 3px;
-                padding-top: 3px;
-                padding-left: 10px;
-                font-weight: bolder;
-                height:1.8em;
-                margin-top: 10px;
-                background-color: #FD6A51;
-            ">자산관리사 연결</button>
+            <div class="dept-graph-content" style="text-align: right;">
+                <div>
+                    <span style="color: black; font-weight:bold">사용할 수 있는 금액</span><br>
+                    <span style="color: #1DCB9D; font-weight:bold; font-size:2em;">65%</span><br>
+                    <span style="color: #797A7A;">650,000원</span>
+                </div>
+                <div style="width: 15vw; margin-top:20vh; margin-left: 23vw; margin-top: 1vh">
+                   <div style="width: 30vw; height:10px">
+                    <div style="float:left; width: 10px; margin-right:10px; height: 10px; background-color: #2EB290"></div>
+                    <div style="float:left; line-height: 10px; color:#797A7A"> 고정지출</div>
+                   </div>
+                   <div style="width: 30vw; height:10px; margin-top: 5px">
+                    <div style="float:left; width: 10px; margin-right:10px; height: 10px; background-color: #3BD4AC;"></div>
+                    <div style="float:left; line-height: 10px; color:#797A7A">  변동지출</div>
+                   </div>
+                </div>
+                
             </div>
         </div>
     </div>
 
+    <div class="bottom-sort-area">
+        <div class="dept-graph-area">
+            <div class="dept-graph-title">소비 종류</div>
+        </div>
+        <div class="graph-area">
+            <div style="width: 100%;"><span style="margin-left: 2%; color: #2EB290; font-weight: bolder">30%</span><span style="margin-left:80%; color: #3BD4AC; font-weight: bolder">70%</span></div>
+            <div class="draw-bar-graph" id="first-ratio"></div>
+            <div class="draw-bar-graph" id="fourth-ratio" style="text-align: right;"></div>
+        </div>
+
+        <div class="graph-inform-area">
+            <div style="float:left; width: 10px; margin-right:10px; height: 10px; background-color: #2EB290"></div>
+            <div style="float:left; line-height: 10px; color:#797A7A"> 고정지출 (30%)</div>
+            <div style="float:left; margin-left: 20%; margin-top:1vh;">
+                <ul style="list-style-type: disc">
+                    <li>대출금 상환금</li>
+                    <li>세금</li>
+                    <li>주택관리비</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="graph-inform-area" style="margin-top:29vh">
+            <div style="float:left; width: 10px; margin-right:10px; height: 10px; background-color: #2EB290"></div>
+            <div style="float:left; line-height: 10px; color:#797A7A"> 변동지출 (70%)</div>
+            <div style="float:left; margin-left: 20%; margin-top:1vh;">
+                <ul style="list-style-type: disc">
+                    <li>사교육비</li>
+                    <li>교통비</li>
+                    <li>통신비</li>
+                    <li>건강의료비</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="graph-inform-bottom">
+            <div id="graph-inform-one-line">😓 현재 변동지출 비율이 높습니다.</div>
+            <div style="margin-top: 3px;">지출 비율을 조정하는 것을 권합니다.</div>
+
+        </div>
+    </div>
+
     <div class="bottom-nav-bar">
-        <div class="bottom-nav-first">
-            <img src="/image/bottom_icon_1.png">
+        <div class="bottom-nav-first" id="bottom-icon-first">
+            <img src="/image/bottom_icon_1.svg">
         </div>
-        <div class="bottom-nav-second">
-            <img src="/image/bottom_icon_2.png">
+        <div class="bottom-nav-second" id="bottom-icon-second">
+            <img src="/image/bottom_icon_2.svg">
         </div>
-        <div class="bottom-nav-third">
-            <img src="/image/bottom_icon_3.png">
+        <div class="bottom-nav-third" id="bottom-icon-third">
+            <img src="/image/bottom_icon_3.svg">
         </div>
     </div>
 </body>
