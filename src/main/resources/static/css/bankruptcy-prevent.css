@@ -2,6 +2,10 @@ body{
     margin: 0px;
     font-family: 'Nanum Gothic', sans-serif;
     background-color: rgba(248, 248, 248);
+    color: #797A7A;
+
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 .main-graph-area{
     width: 100vw;
@@ -221,7 +225,7 @@ body{
 */
 .bottom-sort-area{
     width: 100vw;
-    height: 40vh;
+    height: 70vh;
     background-color: white;
     margin-top: 2vh;
     margin-bottom: 15vh;
@@ -240,6 +244,53 @@ body{
     font-size: 0.8em;
     margin-left: 5vw;
     margin-top: 3vh;
+}
+
+.stock-recommend-box-area{
+    position: absolute;
+    width: 90vw;
+    height: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.stock-recommend-box-left{
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+.stock-recommend-box-right{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.risk-alarm-btn{
+    width: 6em;
+    height: 2em;
+
+    margin-top: 20%;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 2em;
+
+    background-color: #1DCB9D;
+    font-weight: 800;
+    color: white;
+}
+
+.stock-recommend-box-bottom{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+
+    position: absolute;
+    height: 5vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.stock-recommend-box-bottom-box{    
+    width: 50%;
+    height: 100%;
 }
 /* 
 하단 네비게이션 바

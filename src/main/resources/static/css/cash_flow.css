@@ -2,6 +2,7 @@ body{
     margin: 0px;
     font-family: 'Nanum Gothic', sans-serif;
     background-color: rgba(248, 248, 248);
+    color: #797A7A;
 }
 .main-graph-area{
     width: 100vw;
@@ -59,12 +60,13 @@ body{
 }
 
 .graph-area{
-    width: 95%;
+    position: absolute;
+    width: 95vw;
     height: 5vh;
 
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-top: 2vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 6vh;
 
     /* background-color: cornsilk; */
 }
@@ -75,13 +77,13 @@ body{
     float: left;
 }
 .draw-bar-graph#first-ratio{
-    width: 58%;
-    background-color: #1DCB9D;
+    width: 29%;
+    background-color: #2EB290;
     border-radius: 10px 0 0 10px;
 }
 
 .draw-bar-graph#second-ratio{
-    width: 18%;
+    width: 70%;
     background-color: #4471FB;
     border-radius: 1px;
     margin-left: 3px;
@@ -95,8 +97,8 @@ body{
 }
 
 .draw-bar-graph#fourth-ratio{
-    width: 8%;
-    background-color: #FBAE29;
+    width: 69%;
+    background-color: #3BD4AC;
     border-radius: 0 10px 10px 0;
     margin-left: 3px;
 }
@@ -149,7 +151,7 @@ body{
 }
 
 .graph-info-area .color-info#first{
-    background-color: #1DCB9D;
+    background-color: #2EB290;
 }
 .graph-info-area .color-info#second{
     background-color: #4471FB;
@@ -158,7 +160,7 @@ body{
     background-color: #FD6A51;
 }
 .graph-info-area .color-info#fourth{
-    background-color: #FBAE29;
+    background-color: #3BD4AC;
 }
 
 /* 
@@ -204,7 +206,7 @@ body{
 */
 .bottom-graph-area{
     width: 100vw;
-    height: 21vh;
+    height: 22vh;
     background-color: white;
     margin-top: 2vh;
 
@@ -233,6 +235,7 @@ body{
     margin-right:5%;
     margin-top: 2vh;
     height: 20vh;
+    font-weight: bolder;
 }
 
 #donut-percent-inner-text{
@@ -257,15 +260,56 @@ body{
 
 .dept-graph-content{
     position: absolute;
-    text-align: center;
-    width: 45%;
+    text-align: right;
+    width: 40vw;
     height: 10vh;
+    margin-right: 5vw;
     margin-left: 50vw;
-    padding-top: 10vh;
+    padding-top: 5vh;
     font-size: 0.8em;
     line-height: 1.6em;    
 }
 
+.depth-graph-content-bottom{
+    width: 40vw;
+    height: 10vh;
+    margin-left: 50vw;
+}
+
+.depth-graph-right-color-area{
+    width: 15vw; height:20vh; margin-top:20vh; margin-left: 23vw; margin-top: 2vh
+}
+.depth-graph-right-color-spoid{
+    float:left; width: 10px; margin-right:10px; height: 10px; 
+}
+.depth-graph-right-color-text{
+    float:left; line-height: 10px; color:#797A7A
+}
+.graph-inform-area{
+    position: absolute;
+    
+    width: 40vw;
+    height: 20vh;
+    margin-top: 15vh;
+    margin-left: 10vw;
+}
+.graph-inform-bottom{
+    position: absolute;
+    width: 70vw;
+    height: 10vh;
+    text-align: center;
+
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 45vh;
+}
+#graph-inform-one-line{
+    border: 2px #1DCB9D solid;
+    border-radius: 10px;
+    width: auto;
+    color: #1DCB9D;
+    font-weight: bolder;
+}
 /* 
 하단 네비게이션 바
 */
@@ -313,10 +357,11 @@ body{
 
 .bottom-sort-area{
     width: 100vw;
-    height: 40vh;
+    height: 55vh;
     background-color: white;
     margin-top: 2vh;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
 
     box-shadow: 3px 3px rgb(230, 230, 230);
 }
+
