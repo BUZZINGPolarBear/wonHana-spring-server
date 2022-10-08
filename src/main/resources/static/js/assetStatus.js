@@ -20,6 +20,9 @@ cash_flow_btn.onclick = ()=>{
   location.href = "/cash-flow"
 }
 
+window.onload = function(){
+  drawIndex();
+}
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -51,3 +54,41 @@ var myChart = new Chart(ctx, {
 }
 );
 
+async function drawIndex(){
+  const getUserInform = await getAPI('localhost:23628', 'userInfoById/1');
+  console.log(getUserInform.result[0]);
+
+  const assetTotal = getUserInform.result[0].asset
+  console.log(assetTotal)
+
+  const stock =  getUserInform.result[0].stock
+  console.log(`stock : ${((stock/assetTotal)*100).toFixed(2)}%`)
+  const accountBalance =  getUserInform.result[0].accountBalance
+  console.log(`accountBalance : ${((accountBalance/assetTotal)*100).toFixed(2)}%`)
+  const house =  getUserInform.result[0].house
+  console.log(`house : ${((house/assetTotal)*100).toFixed(2)}%`)
+  const cash = assetTotal - (stock + accountBalance + house)
+  console.log(`cash : ${((cash/assetTotal)*100).toFixed(2)}%`)
+
+
+}
+
+
+
+//get API AS JSON
+async function getAPI(host, path, headers ={}) {
+  const url = `http://${host}/${path}`;
+  const options = {
+    method: "GET",
+    headers: headers,
+  };
+  const res = await fetch(url, options);
+  const data = res.json();
+  // console.log(res)
+  // console.log(data)
+  if (res.ok) {
+    return data;
+  } else {
+    throw new Error(data);
+  }
+}
