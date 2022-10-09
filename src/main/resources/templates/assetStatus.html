@@ -16,6 +16,7 @@
 
     <!-- CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -40,26 +41,26 @@
             <div class="graph-info-area">
                 <div class="color-info" id="first"></div>
                 <div class="info-text">금융투자자산</div>
-                <div class="percent-info">60%</div>
-                <div class="money-info">1,245,920원</div>
+                <div class="percent-info" id="stock-inform-as-ratio"></div>
+                <div class="money-info" id="stock-inform-as-money"></div>
             </div>
             <div class="graph-info-area">
                 <div class="color-info" id="second"></div>
                 <div class="info-text">예·적금</div>
-                <div class="percent-info">20%</div>
-                <div class="money-info">455,920원</div>
+                <div class="percent-info" id="balance-inform-as-ratio"></div>
+                <div class="money-info" id="balance-inform-as-money"></div>
             </div>
             <div class="graph-info-area">
                 <div class="color-info" id="third"></div>
                 <div class="info-text">현금</div>
-                <div class="percent-info">10%</div>
-                <div class="money-info">123,456원</div>
+                <div class="percent-info" id="cash-inform-as-ratio"></div>
+                <div class="money-info" id="cash-inform-as-money"></div>
             </div>
             <div class="graph-info-area">
                 <div class="color-info" id="fourth"></div>
                 <div class="info-text">부동산</div>
-                <div class="percent-info">10%</div>
-                <div class="money-info">123,456원</div>
+                <div class="percent-info" id="house-inform-as-ratio"></div>
+                <div class="money-info" id="house-inform-as-money"></div>
             </div>
         </div>
     </div>

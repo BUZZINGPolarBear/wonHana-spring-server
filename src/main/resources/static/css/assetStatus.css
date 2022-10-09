@@ -78,29 +78,38 @@ body{
 }
 .draw-bar-graph#first-ratio{
     width: 58%;
-    background-color: #1DCB9D;
+    background-color: #797A7A;
     border-radius: 10px 0 0 10px;
+
+    transition-delay: 250ms;
+    transition-property: width;
 }
 
 .draw-bar-graph#second-ratio{
     width: 18%;
-    background-color: #4471FB;
+    background-color: #A5A5A6;
     border-radius: 1px;
     margin-left: 3px;
+
+    transition: all ease 0.5s 0s;
 }
 
 .draw-bar-graph#third-ratio{
     width: 8%;
-    background-color: #FD6A51;
+    background-color: #797A7A;
     border-radius: 1px;
     margin-left: 3px;
+
+    transition: all ease 0.5s 0s;
 }
 
 .draw-bar-graph#fourth-ratio{
     width: 8%;
-    background-color: #FBAE29;
+    background-color: #A5A5A6;
     border-radius: 0 10px 10px 0;
     margin-left: 3px;
+
+    transition: all ease 0.5s 0s;
 }
 
 .graph-info-area{
