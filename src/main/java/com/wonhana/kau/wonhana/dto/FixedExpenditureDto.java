@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class FixedExpenditureDto {
 
-    private Integer userExpenditureId;
+    private Integer userId;
     private Integer houseLoanInterest;
     private Integer carLent;
     private Integer carInsurance;

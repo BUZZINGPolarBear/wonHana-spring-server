@@ -70,10 +70,10 @@ public class UserInfoRepository {
     }
 
     public FlexibleExpenditureDto saveFlexibleExpenditure(FlexibleExpenditureDto flexibleDto) {
-        String sql = "insert into FlexibleExpenditure (userExpenditureId, coffee, food, " +
-                "snack, liquidNCigarette, necessityProduct, oil) " +
-                "values (:userExpenditureId, :coffee, :food, " +
-                ":snack, :liquidNCigarette, :necessityProduct, :oil)";
+        String sql = "insert into FlexibleExpenditure (userId, coffee, food, " +
+                "snack, liquidNCigarette, lifeStyle, oil) " +
+                "values (:userId, :coffee, :food, " +
+                ":snack, :liquidNCigarette, :lifeStyle, :oil)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(flexibleDto);
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -83,9 +83,9 @@ public class UserInfoRepository {
     }
 
     public FixedExpenditureDto saveFixedExpenditure(FixedExpenditureDto fixedDto) {
-        String sql = "insert into FixedExpenditure (userExpenditureId, houseLoanInterest, " +
+        String sql = "insert into FixedExpenditure (userId, houseLoanInterest, " +
                 "carLent, carInsurance, dues, communicationCost, subscribeFee) " +
-                "values (:userExpenditureId, :houseLoanInterest, " +
+                "values (:userId, :houseLoanInterest, " +
                 ":carLent, :carInsurance, :dues, :communicationCost, :subscribeFee)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(fixedDto);
