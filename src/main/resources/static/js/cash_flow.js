@@ -23,7 +23,7 @@ window.onload = function(){
 }
 
 async function drawIndex() {
-    const getUserInform = await getAPI('localhost:23628', 'userInfoById/1');
+    const getUserInform = await getAPI(hostAddress, 'userInfoById/1');
     console.log(getUserInform.result[0]);
 
     const fixedExpenditure = getUserInform.result[0].fixedExpenditure;
