@@ -3,7 +3,7 @@ package com.wonhana.kau.wonhana.dto;
 import lombok.Data;
 
 @Data
-public class UserInfoDto {
+public class ShowUserInfoDto {
 
     private Long id;
 

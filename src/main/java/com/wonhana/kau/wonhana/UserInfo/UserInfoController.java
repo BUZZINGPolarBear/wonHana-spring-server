@@ -2,7 +2,7 @@ package com.wonhana.kau.wonhana.UserInfo;
 
 //import  com.wonhana.kau.wonhana.UserInfo.model.*;
 import com.wonhana.kau.wonhana.config.BaseResponse;
-import com.wonhana.kau.wonhana.dto.UserInfoDto;
+import com.wonhana.kau.wonhana.dto.*;
 import com.wonhana.kau.wonhana.repository.BankProductsRepository;
 import com.wonhana.kau.wonhana.repository.UserInfoRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,49 +23,54 @@ public class UserInfoController {
     private final UserInfoRepository userInfoRepository;
 
     @GetMapping("/userInfoAll")
-    public BaseResponse<UserInfoDto> showUserAll() {
+    public BaseResponse<ShowUserInfoDto> showUserAll() {
 
-        List<UserInfoDto> userInfoDto = userInfoRepository.showAll();
-        BaseResponse baseResponse = new BaseResponse<>(userInfoDto);
+        List<ShowUserInfoDto> showUserInfoDto = userInfoRepository.showAll();
+        BaseResponse baseResponse = new BaseResponse<>(showUserInfoDto);
 
         return baseResponse;
     }
 
     @GetMapping("/userInfoById/{userId}")
-    public BaseResponse<UserInfoDto> showUserById(@PathVariable long userId) {
-        List<UserInfoDto> userInfoDto = userInfoRepository.findById(userId);
-        BaseResponse baseResponse = new BaseResponse<>(userInfoDto);
+    public BaseResponse<ShowUserInfoDto> showUserById(@PathVariable long userId) {
+        List<ShowUserInfoDto> showUserInfoDto = userInfoRepository.findById(userId);
+        BaseResponse baseResponse = new BaseResponse<>(showUserInfoDto);
 
         return baseResponse;
     }
 
+    @PostMapping("/addAsset")
+    public BaseResponse addAsset(@RequestBody AssetDto assetDto) {
+        userInfoRepository.saveAssetInfo(assetDto);
 
-
-    @PostMapping("/sliderProduct")
-    public BaseResponse<String> showSliderProducts(@RequestBody Integer slider) {
-
-        BaseResponse baseResponse;
-
-        if (slider <= 33){
-            baseResponse = new BaseResponse<>("소극적인 상품 드림");
-        }
-        else if (slider <= 66){
-            baseResponse = new BaseResponse<>("평범한 상품 드림");
-        }
-        else {
-            baseResponse = new BaseResponse<>("대박 상품 드림");
-        }
-
-        return baseResponse;
+        return new BaseResponse<>("Asset에 삽입성공");
     }
 
+    @PostMapping("/addDebt")
+    public BaseResponse addDebt(@RequestBody DebtDto debtDto) {
+        userInfoRepository.saveDebtInfo(debtDto);
 
-    // db의 유저들이 많이 갖고 있는 상품의 조회
-    @PostMapping("/popularProduct")
-    @ResponseBody
-    public BaseResponse<String> showPopularProduct() {
-        BaseResponse baseResponse = new BaseResponse<>("유저들이 가장 많이 선택한 상품 2개에요");
+        return new BaseResponse<>("Debt에 삽입성공");
+    }
 
-        return baseResponse;
+    @PostMapping("/addIncome")
+    public BaseResponse addIncome(@RequestBody IncomeDto incomeDto) {
+        userInfoRepository.saveIncomeInfo(incomeDto);
+
+        return new BaseResponse<>("Income에 삽입성공");
+    }
+
+    @PostMapping("/addFlexibleExpenditure")
+    public BaseResponse addFlexibleExpenditure(@RequestBody FlexibleExpenditureDto flexibleDto) {
+        userInfoRepository.saveFlexibleExpenditure(flexibleDto);
+
+        return new BaseResponse<>("FlexibleExpenditure에 삽입성공");
+    }
+
+    @PostMapping("/addFixedExpenditure")
+    public BaseResponse addFixedExpenditure(@RequestBody FixedExpenditureDto fixedDto) {
+        userInfoRepository.saveFixedExpenditure(fixedDto);
+
+        return new BaseResponse<>("FixedExpenditure에 삽입성공");
     }
 }
