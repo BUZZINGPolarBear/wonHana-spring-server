@@ -1,8 +1,7 @@
-package com.wonhana.kau.wonhana.sample;
+package com.wonhana.kau.wonhana.UserInfo;
 
-//import  com.wonhana.kau.wonhana.sample.model.*;
+//import  com.wonhana.kau.wonhana.UserInfo.model.*;
 import com.wonhana.kau.wonhana.config.BaseResponse;
-import com.wonhana.kau.wonhana.dto.BankProductsDto;
 import com.wonhana.kau.wonhana.dto.UserInfoDto;
 import com.wonhana.kau.wonhana.repository.BankProductsRepository;
 import com.wonhana.kau.wonhana.repository.UserInfoRepository;
@@ -14,11 +13,11 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class SampleController {
+public class UserInfoController {
 
     @Autowired
-    private final SampleProvider sampleProvider;
-    private final SampleService sampleService;
+    private final UserInfoProvider userInfoProvider;
+    private final UserInfoService userInfoService;
 
     private final BankProductsRepository bankProductsRepository;
     private final UserInfoRepository userInfoRepository;
