@@ -81,8 +81,7 @@ body{
     background-color: #797A7A;
     border-radius: 10px 0 0 10px;
 
-    transition-delay: 250ms;
-    transition-property: width;
+    transition: all ease 0.5s 0s;
 }
 
 .draw-bar-graph#second-ratio{
