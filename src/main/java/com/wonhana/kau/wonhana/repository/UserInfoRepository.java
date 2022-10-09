@@ -59,8 +59,8 @@ public class UserInfoRepository {
     }
 
     public IncomeDto saveIncomeInfo(IncomeDto incomeDto) {
-        String sql = "insert into UserIncome (flexibleIncome, fixedIncome) " +
-                "values (:flexibleIncome, :fixedIncome)";
+        String sql = "insert into UserIncome (userId, flexibleIncome, fixedIncome) " +
+                "values (:userId, :flexibleIncome, :fixedIncome)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(incomeDto);
         KeyHolder keyHolder = new GeneratedKeyHolder();

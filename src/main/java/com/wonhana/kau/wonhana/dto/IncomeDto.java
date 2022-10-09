@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class IncomeDto {
 
+    private Integer userId;
     private Integer flexibleIncome;
     private Integer fixedIncome;
 }
