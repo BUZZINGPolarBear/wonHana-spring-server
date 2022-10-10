@@ -24,7 +24,7 @@ window.onload = function(){
 
 async function drawIndex() {
     const getUserInform = await getAPI(hostAddress, 'userInfoById/1');
-    console.log(getUserInform.result[0]);
+    // console.log(getUserInform.result[0]);
 
     const fixedExpenditure = getUserInform.result[0].fixedExpenditure;
     const flexibleExpenditure = getUserInform.result[0].flexibleExpenditure;
@@ -36,9 +36,9 @@ async function drawIndex() {
 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    console.log(`고정지출 비율: ${Math.round(fixedExpenditureRatio)}`)
-    console.log(`변동지출 비율: ${Math.round(flexibleExpenditureRatio)}`)
-    console.log(`사용가능 금액 비율: ${Math.round(usableMoneyRatio)}`)
+    // console.log(`고정지출 비율: ${Math.round(fixedExpenditureRatio)}`)
+    // console.log(`변동지출 비율: ${Math.round(flexibleExpenditureRatio)}`)
+    // console.log(`사용가능 금액 비율: ${Math.round(usableMoneyRatio)}`)
 
     $("#donut-percent-text").append(`${Math.round(fixedExpenditureRatio+flexibleExpenditureRatio)}%`)
     $("#usable-money-ratio").append(`${Math.round(usableMoneyRatio)}%`)
