@@ -1,6 +1,6 @@
 package com.wonhana.kau.wonhana.repository;
 
-import com.wonhana.kau.wonhana.dto.UserInfoDto;
+import com.wonhana.kau.wonhana.dto.ShowUserInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.wonhana.kau.wonhana.dto.*;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -129,7 +129,7 @@ public class UserInfoRepository {
     }
 
 
-    public List<UserInfoDto> findById(Long id) {
+    public List<ShowUserInfoDto> findById(Long id) {
         String sql =
         "SELECT U.id,name, email, state, houseLoanInterest, carLent, carInsurance, dues, communicationCost, subscribeFee, coffee, food, snack, liquidNCigarette, necessityProduct, oil, car, accountBalance, stock, house, houseLoan, carLoan, flexibleIncome, fixedIncome,\n" +
                 "       (car + accountBalance + stock + house) as asset,\n" +
